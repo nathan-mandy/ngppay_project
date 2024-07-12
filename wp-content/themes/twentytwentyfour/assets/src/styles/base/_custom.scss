@@ -1,0 +1,402 @@
+@use 'sass:math';
+
+.checklist {
+	position: relative;
+
+	&::before {
+		position: absolute;
+		top: 3px;
+		left: -25px;
+		width: 16px;
+		height: 16px;
+		background-image: url('../images/tick.png'); /* Adjust the path as necessary */
+		content: '';
+	}
+}
+
+.button-design a {
+	position: relative;
+	padding: 16px 56px 16px 16px;
+
+	&::after {
+		position: absolute;
+		top: 7px;
+		right: 25px;
+		width: 25px;
+		height: 20px;
+		background-image: url('../images/arrow.png'); /* Default background image */
+		content: '';
+	}
+
+	&:hover {
+		&::after {
+			top: 9px; // Adjust position on hover
+			transform: rotate(45deg); // Change image on hover
+		}
+	}
+}
+
+.para-hover-column {
+	padding-bottom: 20px;
+	border-bottom: 2px solid #EBEBEB;
+
+	&:hover {
+		border-bottom: 2px solid #FF6B02;
+	}
+}
+
+.img-padding {
+	padding: 30px;
+	border-radius: 5px;
+	box-shadow: 0 0 22px 0 #0000000D;
+	text-align: center;
+}
+
+.eyebrow-border {
+	position: relative;
+	padding-left: 25px;
+
+	&::before {
+		position: absolute;
+		top: 7px;
+		left: -10px;
+		width: 25px;
+		height: 2px;
+		border: 2px solid #052A3B;
+		content: '';
+	}
+}
+
+.eyebrow-border-about {
+	position: relative;
+	padding-left: 25px;
+
+	&::before {
+		position: absolute;
+		top: 7px;
+		left: -10px;
+		width: 25px;
+		height: 2px;
+		border: 2px solid;
+		content: '';
+	}
+}
+
+.eyebrow-border-form {
+	position: relative;
+	padding-left: 35px;
+
+	&::before {
+		position: absolute;
+		top: 7px;
+		left: 0;
+		width: 25px;
+		height: 2px;
+		border: 2px solid #052A3B;
+		content: '';
+	}
+}
+
+.header-block {
+	margin: 0 auto;
+}
+
+.header-button-design {
+	padding-left: 30px;
+}
+
+.header-button-design a {
+	position: relative;
+	padding: 11px 43px 11px 17px;
+
+	&::after {
+		position: absolute;
+		top: 3px;
+		right: 16px;
+		width: 25px;
+		height: 20px;
+		background-image: url('../images/arrow.png');
+		content: '';
+	}
+
+	&:hover {
+		&::after {
+			top: 4px; // Adjust position on hover
+			transform: rotate(45deg);
+		}
+	}
+}
+
+.utility-p {
+	position: relative;
+
+	&::before {
+		position: absolute;
+		top: 4px;
+		right: 14%;
+		width: 15px;
+		height: 14px;
+		background-image: url('../images/maillogo.png');
+		content: '';
+	}
+}
+
+.utility-p a {
+	color: #FFFF;
+	text-decoration: none;
+}
+
+.navigation-row {
+	gap: 20px;
+	align-items: baseline;
+}
+
+.forminator-button-submit {
+	position: relative;
+	padding: 16px 56px 16px 16px;
+	border-radius: 5px;
+	background: #FF6B02;
+
+	&::after {
+		position: absolute;
+		top: 10px;
+		right: 20px;
+		width: 25px;
+		height: 20px;
+		background-image: url('../images/arrow.png'); /* Default background image */
+		content: '';
+	}
+
+	&:hover::after {
+		top: 15px;
+		transform: rotate(45deg);
+	}
+}
+
+.forminator-edit-module {
+	display: none;
+}
+
+.forminator-ui.forminator-custom-form[data-design=default] .forminator-field {
+	text-align: center;
+}
+
+.header-logo {
+	position: relative;
+	bottom: 52px;
+}
+
+.banner-para {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.banner-button a {
+	position: relative;
+	padding: 16px 56px 16px 16px;
+
+	&::after {
+		position: absolute;
+		top: 7px;
+		right: 20px;
+		width: 25px;
+		height: 20px;
+		background-image: url('../images/arrow.png'); /* Default background image */
+		content: '';
+	}
+
+	&:hover {
+		&::after {
+			top: 9px;
+			transform: rotate(45deg);// Adjust position on hover
+		}
+	}
+}
+
+.banner-section {
+	position: relative;
+	bottom: 90px;
+}
+
+.about-position {
+	position: relative;
+	left: 35%;
+}
+
+.service-postion {
+	position: relative;
+	right: 65%;
+}
+
+.why-us-column {
+	padding-left: 20px;
+	border-left: 1px solid #EBEBEB;
+
+	&:hover {
+		border-left: 1px solid #FF6B02;
+	}
+}
+
+.nav-row li:hover {
+	color: #FF6B02;
+}
+
+.para-content p {
+	display: none;
+}
+
+.para-content,
+.paras-content {
+	border-bottom: 1px dashed #ADAFAE;
+}
+
+.payroll,
+.hiddenDiv {
+	display: none;
+}
+
+.showDivLink:hover {
+	color: #FF6B02;
+	cursor: pointer;
+}
+
+.software-link {
+	position: relative;
+
+	&::after {
+		position: absolute;
+		top: 2px;
+		width: 25px;
+		height: 20px;
+		background-image: url('../images/orangearrow.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		content: '';
+	}
+
+	&:hover {
+		&::after {
+			top: 1px; // Adjust position on hover
+			transform: rotate(45deg);
+		}
+	}
+}
+
+.home-posts {
+	display: grid;
+	width: 70%;
+	margin: 0 auto;
+	margin-top: var(--wp--preset--spacing--70);
+	padding: 0 16px;
+	grid-template-columns: 30% 30% 30%;
+	grid-gap: 10px;
+}
+
+.wp-block-post-excerpt__more-text a,
+.wp-block-post-title a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.wp-block-post-title a:where(:not(.wp-element-button)):hover {
+	text-decoration: none;
+}
+
+.wp-block-post-excerpt__more-text a {
+	position: relative;
+	color: #FF6B02;
+
+	&::after {
+		position: absolute;
+		top: 2px;
+		width: 25px;
+		height: 20px;
+		background-image: url('../images/orangearrow.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		content: '';
+	}
+
+	&:hover {
+		&::after {
+			top: 1px; // Adjust position on hover
+			transform: rotate(45deg);
+		}
+	}
+}
+
+.featured-image {
+	position: relative;
+
+	&::after {
+		position: absolute;
+		top: 60%;
+		left: 0;
+		width: 88px;
+		height: 103px;
+		background-image: url('../images/feature-div-image.png');
+		content: '';
+	}
+}
+
+@media only screen and (max-width:1024px) {
+	.wp-block-navigation__responsive-container-open:not(.always-shown) {
+		display: block;
+	}
+
+	.nav-row ul {
+		display: none;
+	}
+
+	.header-button-design {
+		margin-top: 30px;
+		padding: 0;
+	}
+
+	.utility-p {
+		margin-top: 25px;
+	}
+
+	.utility-p a {
+		margin-top: 20px;
+		padding: 10px 25px;
+		border-radius: 12px;
+		background: #333333;
+		color: #FFFF;
+	}
+
+	.utility-p::before {
+		right: 90%;
+	}
+}
+
+@media only screen and (max-width: 780px) {
+	.about-position {
+		position: relative;
+		left: 0%;
+		min-width: 100%;
+	}
+
+	.column-img {
+		width: 65px;
+	}
+
+	.about-group {
+		padding: 50px;
+	}
+
+	.service-column {
+		margin-top: auto;
+	}
+
+	.service-postion {
+		position: relative;
+		right: 0;
+		min-width: 100%;
+	}
+
+	.home-posts {
+		grid-template-columns: none;
+	}
+
+}

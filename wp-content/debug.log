@@ -1,0 +1,20 @@
+[12-Jul-2024 17:55:53 UTC] PHP Warning:  require_once(/Users/nathan/Sites/localhost/ngppay_project/wp-content/themes/twentytwentyfour/includes//blocks/block-card.php): Failed to open stream: No such file or directory in /Users/nathan/Sites/localhost/ngppay_project/wp-content/themes/twentytwentyfour/functions.php on line 20
+[12-Jul-2024 17:55:53 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/Users/nathan/Sites/localhost/ngppay_project/wp-content/themes/twentytwentyfour/includes//blocks/block-card.php' (include_path='.:/Applications/MAMP/bin/php/php8.2.0/lib/php') in /Users/nathan/Sites/localhost/ngppay_project/wp-content/themes/twentytwentyfour/functions.php:20
+Stack trace:
+#0 /Users/nathan/Sites/localhost/ngppay_project/wp-settings.php(663): include()
+#1 /Users/nathan/Sites/localhost/ngppay_project/wp-config.php(99): require_once('/Users/nathan/S...')
+#2 /Users/nathan/Sites/localhost/ngppay_project/wp-load.php(50): require_once('/Users/nathan/S...')
+#3 /Users/nathan/Sites/localhost/ngppay_project/wp-admin/admin.php(34): require_once('/Users/nathan/S...')
+#4 /Users/nathan/Sites/localhost/ngppay_project/wp-admin/post.php(12): require_once('/Users/nathan/S...')
+#5 {main}
+  thrown in /Users/nathan/Sites/localhost/ngppay_project/wp-content/themes/twentytwentyfour/functions.php on line 20
+[12-Jul-2024 17:55:53 UTC] PHP Warning:  require_once(/Users/nathan/Sites/localhost/ngppay_project/wp-content/themes/twentytwentyfour/includes//blocks/block-card.php): Failed to open stream: No such file or directory in /Users/nathan/Sites/localhost/ngppay_project/wp-content/themes/twentytwentyfour/functions.php on line 20
+[12-Jul-2024 17:55:53 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/Users/nathan/Sites/localhost/ngppay_project/wp-content/themes/twentytwentyfour/includes//blocks/block-card.php' (include_path='.:/Applications/MAMP/bin/php/php8.2.0/lib/php') in /Users/nathan/Sites/localhost/ngppay_project/wp-content/themes/twentytwentyfour/functions.php:20
+Stack trace:
+#0 /Users/nathan/Sites/localhost/ngppay_project/wp-settings.php(663): include()
+#1 /Users/nathan/Sites/localhost/ngppay_project/wp-config.php(99): require_once('/Users/nathan/S...')
+#2 /Users/nathan/Sites/localhost/ngppay_project/wp-load.php(50): require_once('/Users/nathan/S...')
+#3 /Users/nathan/Sites/localhost/ngppay_project/wp-blog-header.php(13): require_once('/Users/nathan/S...')
+#4 /Users/nathan/Sites/localhost/ngppay_project/index.php(17): require('/Users/nathan/S...')
+#5 {main}
+  thrown in /Users/nathan/Sites/localhost/ngppay_project/wp-content/themes/twentytwentyfour/functions.php on line 20

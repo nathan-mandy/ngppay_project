@@ -1,0 +1,32 @@
+{
+	"name": "vital-swiper",
+	"version": "1.0.7",
+	"description": "Slider Block powered by Swiper JS.",
+	"author": "Vital",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "wp-scripts start"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^26.6.0",
+		"classnames": "^2.3.2",
+		"swiper": "^11.1.0"
+	},
+	"plugin_data": {
+		"title": "Vital Swiper",
+		"author": "Vital",
+		"author_profile": "https://vitaldesign.com",
+		"download_url": "https://bitbucket.org/madebyvital/vital-swiper/get/master.zip",
+		"tested": "6.5.3",
+		"requires": "6.1.0",
+		"requires_php": "8.0",
+		"last_updated": "2024-05-09 12:04"
+	}
+}

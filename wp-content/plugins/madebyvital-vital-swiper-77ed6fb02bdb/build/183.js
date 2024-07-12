@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkvital_swiper=globalThis.webpackChunkvital_swiper||[]).push([[183],{183:(i,s,a)=>{a.r(s)}}]);

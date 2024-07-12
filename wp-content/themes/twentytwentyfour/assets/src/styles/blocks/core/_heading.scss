@@ -1,0 +1,12 @@
+.is-style-display-heading {
+	color: color('heading');
+	font-size: 48px;
+	font-weight: 700;
+}
+
+.is-style-eyebrow-heading {
+	color: color('link');
+	font-family: var(--wp--preset--font-family--body);
+	font-size: 16px;
+	font-weight: 600;
+}
