@@ -18,3 +18,14 @@ Stack trace:
 #4 /Users/nathan/Sites/localhost/ngppay_project/index.php(17): require('/Users/nathan/S...')
 #5 {main}
   thrown in /Users/nathan/Sites/localhost/ngppay_project/wp-content/themes/twentytwentyfour/functions.php on line 20
+[12-Jul-2024 18:30:19 UTC] PHP Fatal error:  Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "custom_register_blog_posts_cpt" not found or invalid function name in /Users/nathan/Sites/localhost/ngppay_project/wp-includes/class-wp-hook.php:324
+Stack trace:
+#0 /Users/nathan/Sites/localhost/ngppay_project/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters(NULL, Array)
+#1 /Users/nathan/Sites/localhost/ngppay_project/wp-includes/plugin.php(517): WP_Hook->do_action(Array)
+#2 /Users/nathan/Sites/localhost/ngppay_project/wp-settings.php(695): do_action('init')
+#3 /Users/nathan/Sites/localhost/ngppay_project/wp-config.php(99): require_once('/Users/nathan/S...')
+#4 /Users/nathan/Sites/localhost/ngppay_project/wp-load.php(50): require_once('/Users/nathan/S...')
+#5 /Users/nathan/Sites/localhost/ngppay_project/wp-admin/admin-ajax.php(22): require_once('/Users/nathan/S...')
+#6 {main}
+  thrown in /Users/nathan/Sites/localhost/ngppay_project/wp-includes/class-wp-hook.php on line 324
+[12-Jul-2024 19:25:59 UTC] PHP Warning:  Attempt to read property "show_in_quick_edit" on bool in /Users/nathan/Sites/localhost/ngppay_project/wp-admin/includes/ajax-actions.php on line 2130
