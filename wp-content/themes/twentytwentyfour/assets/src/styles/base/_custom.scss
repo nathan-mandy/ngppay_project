@@ -325,7 +325,7 @@
 	}
 }
 
-.featured-image {
+.wp-block-post-featured-image {
 	position: relative;
 
 	&::after {
@@ -334,7 +334,9 @@
 		left: 0;
 		width: 88px;
 		height: 103px;
+		background: #052A3B;
 		background-image: url('../images/feature-div-image.png');
+		background-repeat: no-repeat;
 		content: '';
 	}
 }
