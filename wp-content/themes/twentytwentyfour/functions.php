@@ -19,6 +19,86 @@ $blocks = sprintf('%s/blocks/', $inc);
 require $includes . '/enqueuer.php';
 require_once $blocks . 'blog-card.php';
 
+
+function custom_register_blog_posts_cpt() {
+    $labels = array(
+        'name'               => 'Blog Posts',
+        'singular_name'      => 'Blog Post',
+        'add_new'            => 'Add Blog Posts',
+        'add_new_item'       => 'Add New Blog Posts',
+        'edit_item'          => 'Edit Blog Posts',
+        'new_item'           => 'New Blog Posts',
+        'view_item'          => 'View Blog Posts',
+        'search_items'       => 'Search Blog Posts',
+        'not_found'          => 'No Blog Posts found',
+        'not_found_in_trash' => 'No Blog Posts found in Trash',
+        'parent_item_colon'  => '',
+        'menu_name'          => 'Blog Posts'
+    );
+
+    $args = array(
+        'labels'              => $labels,
+        'public'              => true,
+        'has_archive'         => true,
+        'menu_icon'           => 'dashicons-welcome-write-blog',
+        'rewrite'             => array('slug' => 'blog_posts'),
+        'supports'            => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
+    );
+
+    register_post_type('blog_posts', $args);
+}
+add_action('init', 'custom_register_blog_posts_cpt');
+
+// Register Custom Taxonomy
+function custom_register_taxonomy() {
+
+    $labels = array(
+        'name'                       => 'category',
+        'singular_name'              => 'category',
+        'menu_name'                  => 'category',
+        'all_items'                  => 'All category',
+        'parent_item'                => 'Parent category',
+        'parent_item_colon'          => 'Parent category:',
+        'new_item_name'              => 'New category Name',
+        'add_new_item'               => 'Add New category',
+        'edit_item'                  => 'Edit category',
+        'update_item'                => 'Update category',
+        'view_item'                  => 'View category',
+        'separate_items_with_commas' => 'Separate category with commas',
+        'add_or_remove_items'        => 'Add or remove category',
+        'choose_from_most_used'      => 'Choose from the most used',
+        'popular_items'              => 'Popular category',
+        'search_items'               => 'Search category',
+        'not_found'                  => 'Not Found',
+        'no_terms'                   => 'No genres',
+        'items_list'                 => 'category list',
+        'items_list_navigation'      => 'category list navigation',
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => true, // true for categories, false for tags
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+    );
+    register_taxonomy( 'category', array( 'blog_posts' ), $args );
+
+}
+add_action( 'init', 'custom_register_taxonomy', 0 );
+
+
+
+function show_custom_post_type_on_blog( $query ) {
+	if ( is_home() && $query->is_main_query() ) {
+	  $query->set( 'post_type', array( 'blog_posts' ) );
+	}
+	return $query;
+  }
+  add_action( 'pre_get_posts', 'show_custom_post_type_on_blog' );
+  
+
 if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
 	/**
 	 * Register custom block styles
