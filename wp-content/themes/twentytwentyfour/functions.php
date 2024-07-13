@@ -114,7 +114,8 @@ function custom_register_review_posts_cpt() {
         'has_archive'         => true,
         'menu_icon'           => 'dashicons-welcome-write-blog',
         'rewrite'             => array('slug' => 'review_posts'),
-        'supports'            => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
+       'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
+		'show_in_rest'          => true, 
     );
 
     register_post_type('review_posts', $args);
