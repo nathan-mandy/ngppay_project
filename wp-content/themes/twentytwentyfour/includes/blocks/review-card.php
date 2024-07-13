@@ -6,15 +6,15 @@ if (!class_exists('\Vital\Skeletor_Block')) {
     return;
 }
 
-class Blog_Post_Card extends Skeletor_Block { 
-    public static $title = 'Blog post card';
-    public static $name = 'blog_post_card';
+class Review_Post_Card extends Skeletor_Block { 
+    public static $title = 'Review post card';
+    public static $name = 'review_post_card';
 
     public static $field_group = [
         [
             'label'     => 'Post',
             'type'      => 'post_object',
-            'post_type' => 'blog_posts',
+            'post_type' => 'review_posts',
         ],
     ];
 
@@ -44,9 +44,26 @@ class Blog_Post_Card extends Skeletor_Block {
         $block_data['content']   = get_the_excerpt($post);
         $block_data['cta']       = __('Read More');
         $block_data['href'] = get_the_permalink($post); 
+        $post_author_id = get_post_field('post_author', $post);
+        $post_author_id = get_post_field('post_author', $post);
+        $author_name = get_the_author_meta('display_name', $post_author_id);
+
+        // Get post author's image
+        $author_image = get_field('author_image', 'user_' . $post_author_id); // Replace 'author_image' with the custom field key storing the author's image
+
+        // If ACF (Advanced Custom Fields) is not available, fall back to default WordPress method
+        if (empty($author_image)) {
+            $author_avatar = get_avatar_url($post_author_id);
+        } else {
+            $author_image_url = wp_get_attachment_image_url($author_image, 'thumbnail');
+            $author_avatar = ($author_image_url) ? $author_image_url : get_avatar_url($post_author_id);
+        }
+
+        $block_data['author_name'] = $author_name;
+        $block_data['author_avatar'] = $author_avatar;
         return $block_data;
     }
 
 }
 
-add_action('after_setup_theme', ['Blog_Post_Card', 'init']);
+add_action('after_setup_theme', ['Review_Post_Card', 'init']);
