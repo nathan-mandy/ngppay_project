@@ -622,18 +622,18 @@ body.debug .wp-block-group {
   grid-gap: 10px;
 }
 
-.blog-post-card h4 {
+.blog-post-card h4,.review-post-card .is-style-eyebrow,.review-post-card h5,p {
   margin-top: 0;
-  margin-bottom: 0.3125rem;
+  margin-bottom: 0.625rem;
 }
 
-.post-hover {
+.post-hover,.post-hovers {
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
 }
 
-.post-hover:hover {
+.post-hover:hover,.post-hovers:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
@@ -683,6 +683,26 @@ body.debug .wp-block-group {
   background: #393939;
   color: white;
   text-align: center;
+}
+
+.review-post-card {
+  position: relative;
+  width: 50%;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.0509803922);
+  background: #FFFFFF;
+}
+.review-post-card::after {
+  position: absolute;
+  top: -17%;
+  right: 5%;
+  width: 72px;
+  height: 72px;
+  background-image: url(images/swiper-up.1bc75db5.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  content: "";
 }
 /*   Base styles and layout
 	--------------------------------------------------------------------------  */
