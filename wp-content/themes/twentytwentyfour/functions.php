@@ -19,6 +19,7 @@ $blocks = sprintf('%s/blocks/', $inc);
 
 require $includes . '/enqueuer.php';
 require_once $blocks . 'blog-card.php';
+require_once $blocks . 'review-card.php';
 
 
 
