@@ -292,17 +292,21 @@
 	grid-gap: 10px;
 }
 
-.blog-post-card h4 {
+.blog-post-card h4,
+.review-post-card h5,
+p {
 	margin-top: 0;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 
-.post-hover {
+.post-hover,
+.post-hovers {
 	text-decoration: none;
 	cursor: pointer;
 }
 
-.post-hover:hover {
+.post-hover:hover,
+.post-hovers:hover {
 	text-decoration: none;
 }
 
@@ -356,6 +360,27 @@
 	background: #393939;
 	color: #FFFF;
 	text-align: center;
+}
+
+.review-post-card {
+	position: relative;
+	width: 50%;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 0 5px 2px #0000000D;
+	background: #FFFFFF;
+
+	&::after {
+		position: absolute;
+		top: -17%;
+		right: 5%;
+		width: 72px;
+		height: 72px;
+		background-image: url('images/swiper-up.png');
+		background-repeat: no-repeat;
+		background-position: center;
+		content: '';
+	}
 }
 
 @media only screen and (max-width:1024px) {
