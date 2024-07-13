@@ -1,7 +1,7 @@
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/@wordpress/scripts/node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./assets/src/styles/main.scss ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************/
-@font-face { font-family: E24b5b; src:url(data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAASoAAsAAAAABugAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADsAAABUIIslek9TLzIAAAFEAAAAPwAAAFY2H0XhY21hcAAAAYQAAABVAAABjOEvI+NnbHlmAAAB3AAAAPQAAAEMz1aysWhlYWQAAALQAAAALAAAADYq5nddaGhlYQAAAvwAAAAZAAAAJApCBl5obXR4AAADGAAAABAAAAAQDikAAGxvY2EAAAMoAAAACgAAAAoAmgA2bWF4cAAAAzQAAAAeAAAAIAEQAD5uYW1lAAADVAAAASkAAAIWm5e+CnBvc3QAAASAAAAAJQAAADacSm2jeJxjYGRgYOBiMGCwY2BycfMJYeDLSSzJY5BiYGGAAJA8MpsxJzM9kYEDxgPKsYBpDiBmg4gCACY7BUgAeJxjYGTuYpzAwMrAwMLOtIeBgaEHQjM+YDBkZGJgYGJgZWbACgLSXFMYDjxgeMDE/ALIjQKTQI0gAgCsjAp0AHic7ZCxDYBADAMvn0CBmIOKkkmoGJ9NHif/Y2DpLNmKUhhYABenCLAHI3WrteqdrfrgqJvI/m29y0lXjvKWn2zl115+zeS51KC2m2gv7TjAP2ybDQ0AAAB4nGNgZAACtkjmFwysDAyM6pyM7Ixskbv/9v/t38Osy6y7++8cppTdfy4zgNUxnwaq44aq42QU52Q0Z2Q+rfXP6Z+7FuOuf25ajDsZ92n9c2MGEYy7tP65/3OCSuwDamcCm3GeOYdBisEQaIqRuJi4mKgIG7s4uzobO5uykrqaupqJuZm5mbgSO1BABCRvbGRuZs9oZmqmrsfI2JMWEWJkLCH2S++XmYd3UHp4qKGxsWFoRFqAi5Oahoaak0uAjaWplp4sk5paK3M2UCo8XS9Gc7n7cltFZRDvbGSYkUkwSOECkA4pCS13E1+gZj+gywBR7kBaeJxjYGRgYADiMI1gy3h+m68M3MwvgCIMj7bP9ECm2SLB4hwMTCAeABvmCep4nGNgZGBgfsEABGyRUJKRARWwAAAtNAGwAAAAAAAAAAZZAAAD6AAAA+gAAAAAAAAAFAA2AIYAAHicY2BkYGBgYTBiYGIAARDJBYQMDP/BfAYADcYBTwAAeJxlkD1uwkAUhMdgSAJSghQpKbNVCiKZn5IDQE9Bl8KYtTGyvdZ6QaLLCXKEHCGniHKCHChj82hgLT9/M2/e7soABviFh3p5uG1qvVq4oTpxm/Qg7JOfhTvo40W4S38o3MMbpsJ9POKdO3j+HZ0BSuEW7vEh3Kb/KeyTv4Q7eMK3cJf+j3APK/wJ9/HqDdPIFLEp3FIn+yy0Z3n+rrStUlOoSTA+WwtdaBs6vVHro6oOydS5WMXW5GrOrs4yo0prdjpywda5cjYaxeIHkcmRIoJBgbipDktoJNgjQwh71b3UK6YtKvq1VpggwPgqtWCqaJIhlcaGyTWOrBUOPG1K1zGt+FrO5KS5zGreJCMr/u+6t6MT0Q+wbaZKzDDiE1/kg+YO+T89EV6oAAAAeJxjYGKAAC4G7ICFkYmRmZGFkZWBKdOAKdOQKdOIgQEAEAkB9wAAAA==) format('woff');font-weight: normal;font-style: normal;}
+@font-face { font-family: E24b5b; src:url(data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAASoAAsAAAAABugAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADsAAABUIIslek9TLzIAAAFEAAAAPwAAAFY2H0XhY21hcAAAAYQAAABVAAABjOEvI+NnbHlmAAAB3AAAAPQAAAEMz1aysWhlYWQAAALQAAAALAAAADYq5ps9aGhlYQAAAvwAAAAZAAAAJApCBl5obXR4AAADGAAAABAAAAAQDikAAGxvY2EAAAMoAAAACgAAAAoAmgA2bWF4cAAAAzQAAAAeAAAAIAEQAD5uYW1lAAADVAAAASkAAAIWm5e+CnBvc3QAAASAAAAAJQAAADacSm2jeJxjYGRgYOBiMGCwY2BycfMJYeDLSSzJY5BiYGGAAJA8MpsxJzM9kYEDxgPKsYBpDiBmg4gCACY7BUgAeJxjYGTuYpzAwMrAwMLOtIeBgaEHQjM+YDBkZGJgYGJgZWbACgLSXFMYDjxgeMDE/ALIjQKTQI0gAgCsjAp0AHic7ZCxDYBADAMvn0CBmIOKkkmoGJ9NHif/Y2DpLNmKUhhYABenCLAHI3WrteqdrfrgqJvI/m29y0lXjvKWn2zl115+zeS51KC2m2gv7TjAP2ybDQ0AAAB4nGNgZAACtkjmFwysDAyM6pyM7Ixskbv/9v/t38Osy6y7++8cppTdfy4zgNUxnwaq44aq42QU52Q0Z2Q+rfXP6Z+7FuOuf25ajDsZ92n9c2MGEYy7tP65/3OCSuwDamcCm3GeOYdBisEQaIqRuJi4mKgIG7s4uzobO5uykrqaupqJuZm5mbgSO1BABCRvbGRuZs9oZmqmrsfI2JMWEWJkLCH2S++XmYd3UHp4qKGxsWFoRFqAi5Oahoaak0uAjaWplp4sk5paK3M2UCo8XS9Gc7n7cltFZRDvbGSYkUkwSOECkA4pCS13E1+gZj+gywBR7kBaeJxjYGRgYADiMA3uynh+m68M3MwvgCIMj7avtkCm2SLB4hwMTCAeABrGCeZ4nGNgZGBgfsEABGyRUJKRARWwAAAtNAGwAAAAAAAAAAZZAAAD6AAAA+gAAAAAAAAAFAA2AIYAAHicY2BkYGBgYTBiYGIAARDJBYQMDP/BfAYADcYBTwAAeJxlkD1uwkAUhMdgSAJSghQpKbNVCiKZn5IDQE9Bl8KYtTGyvdZ6QaLLCXKEHCGniHKCHChj82hgLT9/M2/e7soABviFh3p5uG1qvVq4oTpxm/Qg7JOfhTvo40W4S38o3MMbpsJ9POKdO3j+HZ0BSuEW7vEh3Kb/KeyTv4Q7eMK3cJf+j3APK/wJ9/HqDdPIFLEp3FIn+yy0Z3n+rrStUlOoSTA+WwtdaBs6vVHro6oOydS5WMXW5GrOrs4yo0prdjpywda5cjYaxeIHkcmRIoJBgbipDktoJNgjQwh71b3UK6YtKvq1VpggwPgqtWCqaJIhlcaGyTWOrBUOPG1K1zGt+FrO5KS5zGreJCMr/u+6t6MT0Q+wbaZKzDDiE1/kg+YO+T89EV6oAAAAeJxjYGKAAC4G7ICFkYmRmZGFkZWBKdOAKdOQKdOIgQEAEAkB9wAAAA==) format('woff');font-weight: normal;font-style: normal;}
 @charset "UTF-8";
 /*  ==========================================================================
      BASE
@@ -622,22 +622,27 @@ body.debug .wp-block-group {
   grid-gap: 10px;
 }
 
-.wp-block-post-excerpt__more-text a,.wp-block-post-title a {
+.blog-post-card h4 {
+  margin-top: 0;
+  margin-bottom: 0.3125rem;
+}
+
+.post-hover {
   -webkit-text-decoration: none;
   text-decoration: none;
   cursor: pointer;
 }
 
-.wp-block-post-title a:where(:not(.wp-element-button)):hover {
+.post-hover:hover {
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.wp-block-post-excerpt__more-text a {
+.cta-para {
   position: relative;
   color: #FF6B02;
 }
-.wp-block-post-excerpt__more-text a::after {
+.cta-para::after {
   position: absolute;
   top: 2px;
   width: 25px;
@@ -647,24 +652,37 @@ body.debug .wp-block-group {
   background-position: center;
   content: "";
 }
-.wp-block-post-excerpt__more-text a:hover::after {
+.cta-para:hover::after {
   top: 1px;
   transform: rotate(45deg);
 }
 
-.wp-block-post-featured-image {
+.post-hover {
   position: relative;
 }
-.wp-block-post-featured-image::after {
+.post-hover::after {
   position: absolute;
-  top: 60%;
+  top: -20%;
   left: 0;
-  width: 88px;
-  height: 103px;
+  width: 83px;
+  height: 66px;
   background: #052A3B;
   background-image: url(images/feature-div-image.d00992b9.png);
   background-repeat: no-repeat;
+  background-position: center;
   content: "";
+}
+
+.cta-category {
+  position: relative;
+  bottom: 15px;
+  width: 83px;
+  height: 37px;
+  margin: 0;
+  padding: 0.625rem;
+  background: #393939;
+  color: white;
+  text-align: center;
 }
 /*   Base styles and layout
 	--------------------------------------------------------------------------  */
@@ -2575,6 +2593,9 @@ button::-moz-focus-inner {
   }
   .home-posts {
     grid-template-columns: none;
+  }
+  .post-hover::after {
+    top: -31%;
   }}
 @media screen and (max-width: 600px) {
   #wpadminbar {
@@ -2593,6 +2614,10 @@ button::-moz-focus-inner {
   .wp-block-social-links .wp-block-social-link svg {
     min-width: 48px;
     min-height: 48px;
+  }}
+@media only screen and (max-width: 375px) {
+  .post-hover::after {
+    top: -28%;
   }}
 
 /*# sourceMappingURL=main.css.map*/
