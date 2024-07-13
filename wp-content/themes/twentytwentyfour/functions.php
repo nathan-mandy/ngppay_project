@@ -16,8 +16,10 @@ $includes = sprintf('%s/includes', get_template_directory());
 $inc = sprintf('%s/includes/', get_stylesheet_directory());
 $blocks = sprintf('%s/blocks/', $inc);
 
+
 require $includes . '/enqueuer.php';
 require_once $blocks . 'blog-card.php';
+
 
 
 function custom_register_blog_posts_cpt() {
@@ -90,13 +92,77 @@ add_action( 'init', 'custom_register_taxonomy', 0 );
 
 
 
-function show_custom_post_type_on_blog( $query ) {
-	if ( is_home() && $query->is_main_query() ) {
-	  $query->set( 'post_type', array( 'blog_posts' ) );
-	}
-	return $query;
-  }
-  add_action( 'pre_get_posts', 'show_custom_post_type_on_blog' );
+function custom_register_review_posts_cpt() {
+    $labels = array(
+        'name'               => 'Review Posts',
+        'singular_name'      => 'Review Post',
+        'add_new'            => 'Add Review Posts',
+        'add_new_item'       => 'Add New Review Posts',
+        'edit_item'          => 'Edit Review Posts',
+        'new_item'           => 'New Review Posts',
+        'view_item'          => 'View Review Posts',
+        'search_items'       => 'Search Review Posts',
+        'not_found'          => 'No Review Posts found',
+        'not_found_in_trash' => 'No Review Posts found in Trash',
+        'parent_item_colon'  => '',
+        'menu_name'          => 'Review Posts'
+    );
+
+    $args = array(
+        'labels'              => $labels,
+        'public'              => true,
+        'has_archive'         => true,
+        'menu_icon'           => 'dashicons-welcome-write-blog',
+        'rewrite'             => array('slug' => 'review_posts'),
+        'supports'            => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
+    );
+
+    register_post_type('review_posts', $args);
+}
+add_action('init', 'custom_register_review_posts_cpt');
+
+// Register Custom Taxonomy
+function custom_customer_taxonomy() {
+
+    $labels = array(
+        'name'                       => 'Customers',
+        'singular_name'              => 'customer',
+        'menu_name'                  => 'Customers',
+        'all_items'                  => 'All Customers',
+        'parent_item'                => 'Parent Customers',
+        'parent_item_colon'          => 'Parent Customers:',
+        'new_item_name'              => 'New Customers Name',
+        'add_new_item'               => 'Add New Customers',
+        'edit_item'                  => 'Edit Customers',
+        'update_item'                => 'Update Customers',
+        'view_item'                  => 'View Customers',
+        'separate_items_with_commas' => 'Separate Customers with commas',
+        'add_or_remove_items'        => 'Add or remove Customers',
+        'choose_from_most_used'      => 'Choose from the most used',
+        'popular_items'              => 'Popular Customers',
+        'search_items'               => 'Search Customers',
+        'not_found'                  => 'Not Found',
+        'no_terms'                   => 'No Customers',
+        'items_list'                 => 'Customers list',
+        'items_list_navigation'      => 'Customers list navigation',
+    );
+    $args = array(
+        'labels'                     => $labels,
+        'hierarchical'               => true, // true for categories, false for tags
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+    );
+    register_taxonomy( 'customers', array( 'review_posts' ), $args );
+
+}
+add_action( 'init', 'custom_customer_taxonomy', 0 );
+
+
+
+
   
 
 if ( ! function_exists( 'twentytwentyfour_block_styles' ) ) :
