@@ -308,7 +308,7 @@ window.addEventListener('resize', checkScreenWidth);
 var minusPlusIcons = document.querySelectorAll(".minus-plus-img");
 
 // Add click event listeners to each icon
-minusPlusIcons.forEach(function (icon) {
+minusPlusIcons.forEach(function (icon, index) {
   icon.addEventListener("click", function (event) {
     var answer = this.nextElementSibling;
 
@@ -317,11 +317,11 @@ minusPlusIcons.forEach(function (icon) {
       answer.style.display = answer.style.display === "none" ? "block" : "none";
     }
 
-    // Toggle the class of the clicked icon to change its appearance
-    this.classList.toggle("close-icon");
+    // Toggle the class of the clicked icon
     this.classList.toggle("show-icon");
+    this.classList.toggle("close-icon");
 
-    // Reset all other icons to "show-icon" if they were toggled to "close-icon"
+    // Reset all other icons to "show-icon"
     minusPlusIcons.forEach(function (otherIcon) {
       if (otherIcon !== icon) {
         otherIcon.classList.remove("close-icon");
@@ -334,9 +334,14 @@ minusPlusIcons.forEach(function (icon) {
       }
     });
   });
-});
 
-// Initial setup: Hide all answers except the first one
+  // Set initial class based on index (only first has "close-icon")
+  if (index === 0) {
+    icon.classList.add("close-icon");
+  } else {
+    icon.classList.add("show-icon");
+  }
+});
 var allAnswers = document.querySelectorAll(".answer");
 for (var i = 1; i < allAnswers.length; i++) {
   allAnswers[i].style.display = "none";
@@ -1672,7 +1677,7 @@ __webpack_require__.r(__webpack_exports__);
     if(true) {
       (function() {
         var localsJsonString = undefined;
-        // 1721037012029
+        // 1721069141387
         var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {});
         // only invalidate when locals change
         if (
@@ -4376,7 +4381,7 @@ module.exports = window["jQuery"];
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("5a54cd1c8b8baee2d2bf")
+/******/ 		__webpack_require__.h = () => ("6a845d4b78a9817b05dc")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

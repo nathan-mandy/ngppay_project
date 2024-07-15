@@ -17,39 +17,47 @@ window.addEventListener('resize', checkScreenWidth);
 var minusPlusIcons = document.querySelectorAll(".minus-plus-img");
 
 // Add click event listeners to each icon
-minusPlusIcons.forEach(function(icon) {
-    icon.addEventListener("click", function(event) {
-        var answer = this.nextElementSibling;
+minusPlusIcons.forEach(function(icon, index) {
+  icon.addEventListener("click", function(event) {
+    var answer = this.nextElementSibling;
 
-        // Toggle visibility of the answer div
-        if (answer && answer.classList.contains("answer")) {
-            answer.style.display = (answer.style.display === "none") ? "block" : "none";
+    // Toggle visibility of the answer div
+    if (answer && answer.classList.contains("answer")) {
+      answer.style.display = (answer.style.display === "none") ? "block" : "none";
+    }
+
+    // Toggle the class of the clicked icon
+    this.classList.toggle("show-icon");
+    this.classList.toggle("close-icon");
+
+    // Reset all other icons to "show-icon"
+    minusPlusIcons.forEach(function(otherIcon) {
+      if (otherIcon !== icon) {
+        otherIcon.classList.remove("close-icon");
+        otherIcon.classList.add("show-icon");
+        // Ensure other answer divs are hidden
+        var otherAnswer = otherIcon.nextElementSibling;
+        if (otherAnswer && otherAnswer.classList.contains("answer")) {
+          otherAnswer.style.display = "none";
         }
-
-        // Toggle the class of the clicked icon to change its appearance
-        this.classList.toggle("close-icon");
-        this.classList.toggle("show-icon");
-
-        // Reset all other icons to "show-icon" if they were toggled to "close-icon"
-        minusPlusIcons.forEach(function(otherIcon) {
-            if (otherIcon !== icon) {
-                otherIcon.classList.remove("close-icon");
-                otherIcon.classList.add("show-icon");
-                // Ensure other answer divs are hidden
-                var otherAnswer = otherIcon.nextElementSibling;
-                if (otherAnswer && otherAnswer.classList.contains("answer")) {
-                    otherAnswer.style.display = "none";
-                }
-            }
-        });
+      }
     });
-});
+  });
 
-// Initial setup: Hide all answers except the first one
+  // Set initial class based on index (only first has "close-icon")
+  if (index === 0) {
+    icon.classList.add("close-icon");
+  } else {
+    icon.classList.add("show-icon");
+  }
+});
 var allAnswers = document.querySelectorAll(".answer");
 for (var i = 1; i < allAnswers.length; i++) {
-    allAnswers[i].style.display = "none";
+allAnswers[i].style.display = "none";
 }
+
+
+
 
 
 
