@@ -42,7 +42,7 @@ class Blog_Post_Card extends Skeletor_Block {
         $block_data['title']     = get_the_title($post);
         $block_data['image'] = $featured_image;
         $block_data['content']   = get_the_excerpt($post);
-        $block_data['cta']       = __('Read More');
+        $block_data['cta']       = __('Continue Reading');
         $block_data['href'] = get_the_permalink($post); 
         return $block_data;
     }
