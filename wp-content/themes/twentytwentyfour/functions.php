@@ -20,6 +20,9 @@ $blocks = sprintf('%s/blocks/', $inc);
 require $includes . '/enqueuer.php';
 require_once $blocks . 'blog-card.php';
 require_once $blocks . 'review-card.php';
+require_once $blocks . 'home-blog.php';
+require_once $blocks . 'faq-card.php';
+
 
 
 
@@ -46,82 +49,12 @@ function custom_register_blog_posts_cpt() {
         'menu_icon'           => 'dashicons-welcome-write-blog',
         'rewrite'             => array('slug' => 'blog_posts'),
         'supports'            => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
+		'show_in_rest'          => true, 
     );
 
     register_post_type('blog_posts', $args);
 }
 add_action('init', 'custom_register_blog_posts_cpt');
-
-// Register Custom Taxonomy
-function custom_register_taxonomy() {
-
-    $labels = array(
-        'name'                       => 'category',
-        'singular_name'              => 'category',
-        'menu_name'                  => 'category',
-        'all_items'                  => 'All category',
-        'parent_item'                => 'Parent category',
-        'parent_item_colon'          => 'Parent category:',
-        'new_item_name'              => 'New category Name',
-        'add_new_item'               => 'Add New category',
-        'edit_item'                  => 'Edit category',
-        'update_item'                => 'Update category',
-        'view_item'                  => 'View category',
-        'separate_items_with_commas' => 'Separate category with commas',
-        'add_or_remove_items'        => 'Add or remove category',
-        'choose_from_most_used'      => 'Choose from the most used',
-        'popular_items'              => 'Popular category',
-        'search_items'               => 'Search category',
-        'not_found'                  => 'Not Found',
-        'no_terms'                   => 'No genres',
-        'items_list'                 => 'category list',
-        'items_list_navigation'      => 'category list navigation',
-    );
-    $args = array(
-        'labels'                     => $labels,
-        'hierarchical'               => true, // true for categories, false for tags
-        'public'                     => true,
-        'show_ui'                    => true,
-        'show_admin_column'          => true,
-        'show_in_nav_menus'          => true,
-        'show_tagcloud'              => true,
-    );
-    register_taxonomy( 'category', array( 'blog_posts' ), $args );
-
-}
-add_action( 'init', 'custom_register_taxonomy', 0 );
-
-
-
-function custom_register_review_posts_cpt() {
-    $labels = array(
-        'name'               => 'Review Posts',
-        'singular_name'      => 'Review Post',
-        'add_new'            => 'Add Review Posts',
-        'add_new_item'       => 'Add New Review Posts',
-        'edit_item'          => 'Edit Review Posts',
-        'new_item'           => 'New Review Posts',
-        'view_item'          => 'View Review Posts',
-        'search_items'       => 'Search Review Posts',
-        'not_found'          => 'No Review Posts found',
-        'not_found_in_trash' => 'No Review Posts found in Trash',
-        'parent_item_colon'  => '',
-        'menu_name'          => 'Review Posts'
-    );
-
-    $args = array(
-        'labels'              => $labels,
-        'public'              => true,
-        'has_archive'         => true,
-        'menu_icon'           => 'dashicons-welcome-write-blog',
-        'rewrite'             => array('slug' => 'review_posts'),
-       'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
-		'show_in_rest'          => true, 
-    );
-
-    register_post_type('review_posts', $args);
-}
-add_action('init', 'custom_register_review_posts_cpt');
 
 // Register Custom Taxonomy
 function custom_customer_taxonomy() {
@@ -157,12 +90,74 @@ function custom_customer_taxonomy() {
         'show_in_nav_menus'          => true,
         'show_tagcloud'              => true,
     );
-    register_taxonomy( 'customers', array( 'review_posts' ), $args );
+    register_taxonomy( 'customers', array( 'blog_posts' ), $args );
 
 }
 add_action( 'init', 'custom_customer_taxonomy', 0 );
 
 
+
+function custom_register_review_posts_cpt() {
+    $labels = array(
+        'name'               => 'Review Posts',
+        'singular_name'      => 'Review Post',
+        'add_new'            => 'Add Review Posts',
+        'add_new_item'       => 'Add New Review Posts',
+        'edit_item'          => 'Edit Review Posts',
+        'new_item'           => 'New Review Posts',
+        'view_item'          => 'View Review Posts',
+        'search_items'       => 'Search Review Posts',
+        'not_found'          => 'No Review Posts found',
+        'not_found_in_trash' => 'No Review Posts found in Trash',
+        'parent_item_colon'  => '',
+        'menu_name'          => 'Review Posts'
+    );
+
+    $args = array(
+        'labels'              => $labels,
+        'public'              => true,
+        'has_archive'         => true,
+        'menu_icon'           => 'dashicons-welcome-write-blog',
+        'rewrite'             => array('slug' => 'review_posts'),
+       'supports'           => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' ),
+		'show_in_rest'          => true, 
+    );
+
+    register_post_type('review_posts', $args);
+}
+add_action('init', 'custom_register_review_posts_cpt');
+
+// Register Custom Taxonomy
+
+function custom_register_faq_posts_cpt() {
+    $labels = array(
+        'name'               => 'FAQ Posts',
+        'singular_name'      => 'FAQ Post',
+        'add_new'            => 'Add FAQ Posts',
+        'add_new_item'       => 'Add New FAQ Posts',
+        'edit_item'          => 'Edit FAQ Posts',
+        'new_item'           => 'New FAQ Posts',
+        'view_item'          => 'View FAQ Posts',
+        'search_items'       => 'Search FAQ Posts',
+        'not_found'          => 'No FAQ Posts found',
+        'not_found_in_trash' => 'No FAQ Posts found in Trash',
+        'parent_item_colon'  => '',
+        'menu_name'          => 'FAQ Posts'
+    );
+
+    $args = array(
+        'labels'              => $labels,
+        'public'              => true,
+        'has_archive'         => true,
+        'menu_icon'           => 'dashicons-welcome-write-blog',
+        'rewrite'             => array('slug' => 'faq_posts'),
+        'supports'            => array('title', 'editor', 'thumbnail', 'excerpt', 'comments'),
+		'show_in_rest'          => true, 
+    );
+
+    register_post_type('faq_posts', $args);
+}
+add_action('init', 'custom_register_faq_posts_cpt');
 
 
   
