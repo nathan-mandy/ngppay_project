@@ -660,7 +660,7 @@ body.debug .wp-block-group {
 }
 .post-hover::after {
   position: absolute;
-  top: -20%;
+  top: -18%;
   left: 0;
   width: 83px;
   height: 66px;
@@ -779,13 +779,23 @@ body.debug .wp-block-group {
   content: "";
 }
 
-.current {
+.pagination-space .current {
   width: 32px;
   height: 32px;
   padding: 0.625rem;
   border-radius: 32px;
   background: #FF6B02;
   color: #FFFFFF;
+  cursor: pointer;
+}
+
+.page-numbers {
+  width: 32px;
+  height: 32px;
+  padding: 0.625rem;
+  border-radius: 32px;
+  background: #F1F1F1;
+  color: #333333;
   cursor: pointer;
 }
 
@@ -805,6 +815,26 @@ body.debug .wp-block-group {
   bottom: 24px;
   left: 53%;
   background-color: #FF6B02;
+}
+
+.wp-block-post-template li {
+  border-radius: 10px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.0509803922);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.wp-block-post-template li:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.wp-block-column-is-layout-flow {
+  padding: 1.25rem;
+}
+
+.whatsapp-icon {
+  position: fixed;
+  right: 0%;
+  bottom: 0%;
 }
 /*   Base styles and layout
 	--------------------------------------------------------------------------  */
@@ -2719,10 +2749,15 @@ button::-moz-focus-inner {
     top: -31%;
   }
   .swiper .swiper-button-prev {
-    left: 43%;
+    display: none;
   }
   .swiper .swiper-button-next {
-    left: 55%;
+    display: none;
+  }
+  .whatsapp-icon {
+    position: static;
+    right: 0%;
+    bottom: 0%;
   }}
 @media screen and (max-width: 600px) {
   #wpadminbar {
@@ -2739,19 +2774,23 @@ button::-moz-focus-inner {
     flex-basis: 100% !important;
   }
   .wp-block-social-links .wp-block-social-link svg {
-    min-width: 48px;
-    min-height: 48px;
+    min-width: 30px;
+    min-height: 30px;
   }}
 @media only screen and (max-width: 425px) {
-  .swiper .swiper-button-prev {
-    left: 30%;
+  .wp-container-core-group-is-layout-10.wp-container-core-group-is-layout-10 {
+    justify-content: center;
   }
-  .swiper .swiper-button-next {
-    left: 55%;
+  .post-hover::after {
+    top: -29%;
   }}
 @media only screen and (max-width: 375px) {
   .post-hover::after {
-    top: -28%;
+    top: -27%;
+  }
+  .demo-column {
+    padding-right: var(--wp--preset--spacing--30);
+    padding-left: var(--wp--preset--spacing--30);
   }}
 
 /*# sourceMappingURL=main.css.map*/
