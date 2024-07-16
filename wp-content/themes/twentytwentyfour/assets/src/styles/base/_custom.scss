@@ -341,7 +341,7 @@ a:where(:not(.wp-element-button)) {
 
 	&::after {
 		position: absolute;
-		top: -18%;
+		bottom: 96%;
 		left: 0;
 		width: 83px;
 		height: 66px;
@@ -380,6 +380,10 @@ a:where(:not(.wp-element-button)) {
 	background: #393939;
 	color: #FFFF;
 	text-align: center;
+}
+
+.current-menu-item {
+	color: #FF6B02;
 }
 
 .review-post-card {
@@ -527,9 +531,23 @@ a:where(:not(.wp-element-button)) {
 
 .whatsapp-icon {
 	position: fixed;
-	right: 0%;
+	right: 5%;
 	bottom: 0%;
 }
+
+.wp-block-vital-swiper .swiper-button-next::after,
+.wp-block-vital-swiper .swiper-button-prev::after {
+	width: var(--swiper-navigation-size);
+	height: var(--swiper-navigation-size);
+	transform: rotate(90deg);
+	transform-origin: center;
+	background-image: url('images/swiperarrow.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	content: '';
+
+}
+
 @media only screen and (max-width:1024px) {
 	.wp-block-navigation__responsive-container-open:not(.always-shown) {
 		display: block;
@@ -590,12 +608,6 @@ a:where(:not(.wp-element-button)) {
 		grid-template-columns: none;
 	}
 
-	.post-hover {
-		&::after {
-			top: -31%;
-		}
-	}
-
 	.swiper {
 		.swiper-button-prev {
 			display: none;
@@ -608,8 +620,6 @@ a:where(:not(.wp-element-button)) {
 
 	.whatsapp-icon {
 		position: static;
-		right: 0%;
-		bottom: 0%;
 	}
 }
 @media only screen and (max-width: 425px) {
@@ -617,17 +627,4 @@ a:where(:not(.wp-element-button)) {
 		justify-content: center;
 	}
 
-	.post-hover::after {
-		top: -29%;
-	}
-}
-@media only screen and (max-width: 375px) {
-	.post-hover::after {
-		top: -27%;
-	}
-
-	.demo-column {
-		padding-right: var(--wp--preset--spacing--30);
-		padding-left: var(--wp--preset--spacing--30);
-	}
 }
