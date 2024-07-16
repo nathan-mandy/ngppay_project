@@ -709,7 +709,7 @@ body.debug .wp-block-group {
 }
 .review-post-card::after {
   position: absolute;
-  top: -17%;
+  top: -12%;
   right: 5%;
   width: 72px;
   height: 72px;
@@ -793,6 +793,18 @@ body.debug .wp-block-group {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.swiper .swiper-button-prev {
+  position: relative;
+  left: 45%;
+  background-color: #C4C4C4;
+}
+.swiper .swiper-button-next {
+  position: relative;
+  bottom: 24px;
+  left: 53%;
+  background-color: #FF6B02;
 }
 /*   Base styles and layout
 	--------------------------------------------------------------------------  */
@@ -2705,6 +2717,12 @@ button::-moz-focus-inner {
   }
   .post-hover::after {
     top: -31%;
+  }
+  .swiper .swiper-button-prev {
+    left: 43%;
+  }
+  .swiper .swiper-button-next {
+    left: 55%;
   }}
 @media screen and (max-width: 600px) {
   #wpadminbar {
@@ -2723,6 +2741,13 @@ button::-moz-focus-inner {
   .wp-block-social-links .wp-block-social-link svg {
     min-width: 48px;
     min-height: 48px;
+  }}
+@media only screen and (max-width: 425px) {
+  .swiper .swiper-button-prev {
+    left: 30%;
+  }
+  .swiper .swiper-button-next {
+    left: 55%;
   }}
 @media only screen and (max-width: 375px) {
   .post-hover::after {
