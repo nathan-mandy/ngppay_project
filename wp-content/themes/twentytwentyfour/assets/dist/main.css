@@ -660,7 +660,7 @@ body.debug .wp-block-group {
 }
 .post-hover::after {
   position: absolute;
-  top: -18%;
+  bottom: 96%;
   left: 0;
   width: 83px;
   height: 66px;
@@ -697,6 +697,10 @@ body.debug .wp-block-group {
   background: #393939;
   color: white;
   text-align: center;
+}
+
+.current-menu-item {
+  color: #FF6B02;
 }
 
 .review-post-card {
@@ -833,8 +837,19 @@ body.debug .wp-block-group {
 
 .whatsapp-icon {
   position: fixed;
-  right: 0%;
+  right: 5%;
   bottom: 0%;
+}
+
+.wp-block-vital-swiper .swiper-button-next::after,.wp-block-vital-swiper .swiper-button-prev::after {
+  width: var(--swiper-navigation-size);
+  height: var(--swiper-navigation-size);
+  transform: rotate(90deg);
+  transform-origin: center;
+  background-image: url(images/swiperarrow.0566d8a5.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  content: "";
 }
 /*   Base styles and layout
 	--------------------------------------------------------------------------  */
@@ -2745,9 +2760,6 @@ button::-moz-focus-inner {
   .home-posts {
     grid-template-columns: none;
   }
-  .post-hover::after {
-    top: -31%;
-  }
   .swiper .swiper-button-prev {
     display: none;
   }
@@ -2756,8 +2768,6 @@ button::-moz-focus-inner {
   }
   .whatsapp-icon {
     position: static;
-    right: 0%;
-    bottom: 0%;
   }}
 @media screen and (max-width: 600px) {
   #wpadminbar {
@@ -2780,17 +2790,6 @@ button::-moz-focus-inner {
 @media only screen and (max-width: 425px) {
   .wp-container-core-group-is-layout-10.wp-container-core-group-is-layout-10 {
     justify-content: center;
-  }
-  .post-hover::after {
-    top: -29%;
-  }}
-@media only screen and (max-width: 375px) {
-  .post-hover::after {
-    top: -27%;
-  }
-  .demo-column {
-    padding-right: var(--wp--preset--spacing--30);
-    padding-left: var(--wp--preset--spacing--30);
   }}
 
 /*# sourceMappingURL=main.css.map*/

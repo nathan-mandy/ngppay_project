@@ -301,7 +301,9 @@ function checkScreenWidth() {
   if (window.innerWidth < 1025) {
     document.querySelector('.nav-row nav ul').append(document.querySelector('.header-button-design'));
     document.querySelector('.nav-row nav ul').append(document.querySelector('.utility-p'));
-  } else {}
+  } else {
+    document.querySelector('.utlility-row').append(document.querySelector('.utility-p'));
+  }
 }
 checkScreenWidth();
 window.addEventListener('resize', checkScreenWidth);
@@ -1677,7 +1679,7 @@ __webpack_require__.r(__webpack_exports__);
     if(true) {
       (function() {
         var localsJsonString = undefined;
-        // 1721136479625
+        // 1721156842938
         var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {});
         // only invalidate when locals change
         if (
@@ -4381,7 +4383,7 @@ module.exports = window["jQuery"];
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("6e20ec6a270689d14743")
+/******/ 		__webpack_require__.h = () => ("d3f6a1a0ec68b29831c9")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
