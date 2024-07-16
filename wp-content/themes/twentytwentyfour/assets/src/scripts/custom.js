@@ -6,7 +6,7 @@ function checkScreenWidth() {
         document.querySelector('.nav-row nav ul').append(document.querySelector('.utility-p'));
     }
     else{
-
+      document.querySelector('.utlility-row').append(document.querySelector('.utility-p'));
 
     }
 }
