@@ -392,7 +392,7 @@ a:where(:not(.wp-element-button)) {
 
 	&::after {
 		position: absolute;
-		top: -17%;
+		top: -12%;
 		right: 5%;
 		width: 72px;
 		height: 72px;
@@ -483,6 +483,21 @@ a:where(:not(.wp-element-button)) {
 	gap: 10px;
 }
 
+.swiper {
+	.swiper-button-prev {
+		position: relative;
+		left: 45%;
+		background-color: #C4C4C4;
+	}
+
+	.swiper-button-next {
+		position: relative;
+		bottom: 24px;
+		left: 53%;
+		background-color: #FF6B02;
+	}
+}
+
 @media only screen and (max-width:1024px) {
 	.wp-block-navigation__responsive-container-open:not(.always-shown) {
 		display: block;
@@ -546,6 +561,27 @@ a:where(:not(.wp-element-button)) {
 	.post-hover {
 		&::after {
 			top: -31%;
+		}
+	}
+
+	.swiper {
+		.swiper-button-prev {
+			left: 43%;
+		}
+
+		.swiper-button-next {
+			left: 55%;
+		}
+	}
+}
+@media only screen and (max-width: 425px) {
+	.swiper {
+		.swiper-button-prev {
+			left: 30%;
+		}
+
+		.swiper-button-next {
+			left: 55%;
 		}
 	}
 }
