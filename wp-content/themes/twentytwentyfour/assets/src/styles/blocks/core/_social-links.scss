@@ -4,8 +4,8 @@
 
 		@include respond-to('small', 'max') {
 			svg {
-				min-width: 48px;
-				min-height: 48px;
+				min-width: 30px;
+				min-height: 30px;
 			}
 		}
 	}
