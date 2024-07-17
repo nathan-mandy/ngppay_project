@@ -35,7 +35,7 @@ class Blog_Post_Card extends Skeletor_Block {
      public static function before_render($block_data) {
 
         $post = $block_data['post'];
-        $featured_image = get_the_post_thumbnail($post,'small');
+        $featured_image = get_the_post_thumbnail($post,'large');
 
    
         $block_data['catgeory']  = self::get_post_category($post);
