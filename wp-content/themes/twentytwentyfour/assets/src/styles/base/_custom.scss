@@ -439,7 +439,6 @@ a:where(:not(.wp-element-button)) {
 
 .flex-review {
 	display: flex;
-	align-items: center;
 	gap: 20px;
 	margin-top: 20px;
 }
@@ -870,6 +869,10 @@ a:where(:not(.wp-element-button)) {
 	.about-section-main {
 		margin-top: 48px !important;
 	}
+
+	.eyebrow-border-faq::before {
+		right: 55%;
+	}
 }
 @media only screen and (max-width: 425px) {
 	.wp-container-core-group-is-layout-11.wp-container-core-group-is-layout-11 {
@@ -897,5 +900,9 @@ a:where(:not(.wp-element-button)) {
 
 	.img-padding {
 		padding: 20px;
+	}
+
+	.eyebrow-border-faq::before {
+		right: 57%;
 	}
 }

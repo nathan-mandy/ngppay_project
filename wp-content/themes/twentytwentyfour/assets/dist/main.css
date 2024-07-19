@@ -762,7 +762,6 @@ body.debug .wp-block-group {
 
 .flex-review {
   display: flex;
-  align-items: center;
   gap: 20px;
   margin-top: 1.25rem;
 }
@@ -2999,6 +2998,9 @@ button::-moz-focus-inner {
   }
   .about-section-main {
     margin-top: 3rem !important;
+  }
+  .eyebrow-border-faq::before {
+    right: 55%;
   }}
 @media screen and (max-width: 600px) {
   #wpadminbar {
@@ -3036,6 +3038,9 @@ button::-moz-focus-inner {
   }
   .img-padding {
     padding: 1.25rem;
+  }
+  .eyebrow-border-faq::before {
+    right: 57%;
   }}
 
 /*# sourceMappingURL=main.css.map*/

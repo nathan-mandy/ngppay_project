@@ -357,6 +357,9 @@ document.addEventListener('DOMContentLoaded', function () {
   if (hiddenDivs.length > 0) {
     currentVisibleDiv = hiddenDivs[0]; // Initialize with the first div
     currentVisibleDiv.style.display = 'block'; // Ensure the first div is visible initially
+
+    // Add 'active' class to the first showDivLink
+    showDivLinks[0].classList.add('active');
   }
 
   // Add click event listener to each anchor tag
@@ -1691,7 +1694,7 @@ __webpack_require__.r(__webpack_exports__);
     if(true) {
       (function() {
         var localsJsonString = undefined;
-        // 1721412832554
+        // 1721420348175
         var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {});
         // only invalidate when locals change
         if (
@@ -4395,7 +4398,7 @@ module.exports = window["jQuery"];
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("296725df292952c1c41b")
+/******/ 		__webpack_require__.h = () => ("269941aecd467ce30b94")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

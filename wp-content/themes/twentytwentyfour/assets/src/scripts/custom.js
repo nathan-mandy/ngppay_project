@@ -69,6 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
   if (hiddenDivs.length > 0) {
     currentVisibleDiv = hiddenDivs[0]; // Initialize with the first div
     currentVisibleDiv.style.display = 'block'; // Ensure the first div is visible initially
+
+    // Add 'active' class to the first showDivLink
+    showDivLinks[0].classList.add('active');
   }
 
   // Add click event listener to each anchor tag
