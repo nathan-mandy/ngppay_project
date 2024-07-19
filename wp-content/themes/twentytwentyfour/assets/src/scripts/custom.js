@@ -59,31 +59,42 @@ allAnswers[i].style.display = "none";
 
 
 
-
-
 document.addEventListener('DOMContentLoaded', function() {
-    const showDivLinks = document.querySelectorAll('.showDivLink');
-    const hiddenDivs = document.querySelectorAll('.hiddenDiv');
+  const showDivLinks = document.querySelectorAll('.showDivLink');
+  const hiddenDivs = document.querySelectorAll('.hiddenDiv');
 
-    let currentVisibleDiv = hiddenDivs[0]; // Initialize with the first div
+  let currentVisibleDiv;
+
+  // Check if there are hidden divs available
+  if (hiddenDivs.length > 0) {
+    currentVisibleDiv = hiddenDivs[0]; // Initialize with the first div
     currentVisibleDiv.style.display = 'block'; // Ensure the first div is visible initially
+  }
 
-    // Add click event listener to each anchor tag
-    showDivLinks.forEach(function(showDivLink, index) {
-        showDivLink.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent the default action of the anchor tag
+  // Add click event listener to each anchor tag
+  showDivLinks.forEach(function(showDivLink, index) {
+    showDivLink.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent the default action of the anchor tag
 
-            // Hide the currently visible div
-            currentVisibleDiv.style.display = 'none';
+      // Check if currentVisibleDiv is defined before using it
+      if (typeof currentVisibleDiv !== 'undefined') {
+        // Hide the currently visible div
+        currentVisibleDiv.style.display = 'none';
+      }
 
-            // Show the corresponding div
-            hiddenDivs[index].style.display = 'block';
+      // Show the corresponding div
+      hiddenDivs[index].style.display = 'block';
 
-            // Update the reference to the current visible div
-            currentVisibleDiv = hiddenDivs[index];
-        });
+      // Update the reference to the current visible div
+      currentVisibleDiv = hiddenDivs[index];
+
+      // Remove active class from all links and add to the clicked one
+      showDivLinks.forEach(link => link.classList.remove('active'));
+      this.classList.add('active');
     });
+  });
 });
+
 
 
 

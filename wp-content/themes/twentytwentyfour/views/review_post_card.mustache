@@ -1,8 +1,16 @@
 <div class="review-post-card">
-    <a class = "post-hovers" href="{{href}}">
-    <p>{{content}}</p>
-    <h5>{{author_name}}</h5>
-    <p>{{title}}</p>
-    {{{image}}}
-    </a>
+  <a class="post-hovers" href="{{href}}">
+  <p>{{content}}</p>
+  <div class="flex-review">
+        <div class="flex-img">
+            <img src="{{image}}" alt="Your Image">
+        </div>
+        <div class="flex-content">
+            
+            <h5>{{author_name}}</h5>
+            <p>{{title}}</p>
+            <img src="{{featured_image}}" alt="Featured Image">  
+        </div>
+    </div>
+  </a>
 </div>

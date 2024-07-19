@@ -351,22 +351,34 @@ for (var i = 1; i < allAnswers.length; i++) {
 document.addEventListener('DOMContentLoaded', function () {
   const showDivLinks = document.querySelectorAll('.showDivLink');
   const hiddenDivs = document.querySelectorAll('.hiddenDiv');
-  let currentVisibleDiv = hiddenDivs[0]; // Initialize with the first div
-  currentVisibleDiv.style.display = 'block'; // Ensure the first div is visible initially
+  let currentVisibleDiv;
+
+  // Check if there are hidden divs available
+  if (hiddenDivs.length > 0) {
+    currentVisibleDiv = hiddenDivs[0]; // Initialize with the first div
+    currentVisibleDiv.style.display = 'block'; // Ensure the first div is visible initially
+  }
 
   // Add click event listener to each anchor tag
   showDivLinks.forEach(function (showDivLink, index) {
     showDivLink.addEventListener('click', function (event) {
       event.preventDefault(); // Prevent the default action of the anchor tag
 
-      // Hide the currently visible div
-      currentVisibleDiv.style.display = 'none';
+      // Check if currentVisibleDiv is defined before using it
+      if (typeof currentVisibleDiv !== 'undefined') {
+        // Hide the currently visible div
+        currentVisibleDiv.style.display = 'none';
+      }
 
       // Show the corresponding div
       hiddenDivs[index].style.display = 'block';
 
       // Update the reference to the current visible div
       currentVisibleDiv = hiddenDivs[index];
+
+      // Remove active class from all links and add to the clicked one
+      showDivLinks.forEach(link => link.classList.remove('active'));
+      this.classList.add('active');
     });
   });
 });
@@ -1679,7 +1691,7 @@ __webpack_require__.r(__webpack_exports__);
     if(true) {
       (function() {
         var localsJsonString = undefined;
-        // 1721243447325
+        // 1721412832554
         var cssReload = __webpack_require__(/*! ../../../node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js */ "./node_modules/mini-css-extract-plugin/dist/hmr/hotModuleReplacement.js")(module.id, {});
         // only invalidate when locals change
         if (
@@ -4383,7 +4395,7 @@ module.exports = window["jQuery"];
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("e8a8db18e2fed256e2ae")
+/******/ 		__webpack_require__.h = () => ("296725df292952c1c41b")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

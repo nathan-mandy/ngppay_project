@@ -900,7 +900,7 @@
 			},
 			"heading": {
 				"color": {
-					"text": "var(--wp--preset--color--dune)"
+					"text": "var(--wp--preset--color--dark-grey)"
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--heading)",
